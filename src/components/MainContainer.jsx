@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const MainContainer = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div className="w-full h-auto flex flex-col"></div>;
+};
 
-export default MainContainer
+export default MainContainer;
