@@ -1,8 +1,7 @@
-
 import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { CreateContainer, Header, MainContainer } from "./components";
+import { CreateContainer, Header, MainContainer ,Footer} from "./components";
 import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunction";
 import { actionType } from "./context/reducer";
@@ -24,7 +23,7 @@ const App = () => {
   }, []);
 
   return (
-    <AnimatePresence mode='wait'>
+    <AnimatePresence mode="wait">
       <div className="w-screen h-auto flex flex-col bg-primary">
         <Header />
 
@@ -34,6 +33,7 @@ const App = () => {
             <Route path="/createItem" element={<CreateContainer />} />
           </Routes>
         </main>
+        <Footer/>
       </div>
     </AnimatePresence>
   );
